@@ -1,0 +1,15 @@
+.header {
+  height: 80px;
+  color: white;
+  background-color: #1c2b35;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+.header img {
+  height: 60px;
+  width: 60px;
+  border-radius: 20px;
+}

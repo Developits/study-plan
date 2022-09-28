@@ -1,7 +1,13 @@
-import "./App.css";
+import Header from "./components/Header/Header";
+import Tasklist from "./components/Tasklist/Tasklist";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <Header></Header>
+      <Tasklist></Tasklist>
+    </div>
+  );
 }
 
 export default App;
