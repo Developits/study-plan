@@ -1,0 +1,47 @@
+.subject {
+  background-color: white;
+  width: 300px;
+  height: 550px;
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  position: relative;
+}
+.subject img {
+  width: 286px;
+  height: 286px;
+  border-radius: 8px;
+  margin: 7px;
+}
+.subject-name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  margin-top: 7px;
+}
+.subject-info {
+  margin: 0 14px;
+}
+.subject-info p {
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.btn-dashboard {
+  width: 100%;
+  background: grey;
+  border: none;
+  border-radius: 0px 0px 8px 8px;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-dashboard:hover {
+  background: rgb(49, 47, 47);
+}
+.btn-dashboard .btn-text {
+  color: white;
+  margin-right: 10px;
+}
