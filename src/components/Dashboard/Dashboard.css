@@ -1,0 +1,24 @@
+.dashboard {
+  position: sticky;
+  top: 0px;
+  padding: 30px 20px;
+}
+.dashboard img {
+  border-radius: 50px;
+}
+.dashboard button {
+  background-color: darkturquoise;
+  padding: 5px;
+  border-radius: 5px;
+}
+.flexible {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgb(70, 107, 150);
+  display: flex;
+  justify-content: space-evenly;
+}
+.dashboard button:hover {
+  background-color: dimgrey;
+}
