@@ -3,12 +3,9 @@ import "./Dashboard.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-let total = 0;
-
-const Dashboard = ({ dashboard }) => {
-  for (const subject of dashboard) {
-    total = total + subject.duration;
-  }
+const Dashboard = ({ time }) => {
+  const [breakTime, setBreaktime] = useState(0);
+  const allTime = time.reduce((p, c) => p + c, 0);
 
   const notify = () => {
     toast.info("Your activities is completed.", {
@@ -21,12 +18,10 @@ const Dashboard = ({ dashboard }) => {
       progress: undefined,
     });
   };
-  const [breakTime, setBreaktime] = useState(0);
 
   const showBreaktime = (e) => {
-    const t = e.target.value;
+    const t = e.currentTarget.value;
     setBreaktime(t);
-    console(t);
   };
   return (
     <div className="dashboard">
@@ -49,20 +44,28 @@ const Dashboard = ({ dashboard }) => {
       </div>
       <h2>Add a break</h2>
       <div className="flexible">
-        <button value={"10"} onClick={() => showBreaktime()}>
+        <button value="10" onClick={showBreaktime}>
           10 min
         </button>
-        <button>15 min</button>
-        <button>20 min</button>
-        <button>25 min</button>
-        <button>30 min</button>
+        <button value="15" onClick={showBreaktime}>
+          15 min
+        </button>
+        <button value="20" onClick={showBreaktime}>
+          20 min
+        </button>
+        <button value="25" onClick={showBreaktime}>
+          25 min
+        </button>
+        <button value="30" onClick={showBreaktime}>
+          30 min
+        </button>
       </div>
       <div>
         <div>
-          <p>Exercise time : {total / 2} min</p>
+          <p>Exercise time : {allTime} min</p>
         </div>
         <div>
-          <p>Break time : {breakTime}min </p>
+          <p>Break time : {breakTime} min </p>
         </div>
       </div>
       <button onClick={notify}>Activity Completed</button>

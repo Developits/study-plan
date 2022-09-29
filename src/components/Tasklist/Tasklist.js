@@ -5,7 +5,7 @@ import "./Tasklist.css";
 
 const Tasklist = () => {
   const [subjects, setSubjects] = useState([]);
-  const [dashboard, setDashboard] = useState([]);
+  const [time, setTime] = useState([]);
 
   useEffect(() => {
     fetch("subjects.json")
@@ -13,11 +13,11 @@ const Tasklist = () => {
       .then((data) => setSubjects(data));
   }, []);
 
-  const handleAddToDashboard = (selectedSubject) => {
-    let newDashboard = [selectedSubject];
-    setDashboard(newDashboard);
+  const handleAddToDashboard = (duration) => {
+    let newDashboard = [...time, duration];
+    setTime(newDashboard);
   };
-
+  console.log(time);
   return (
     <div className="task-container">
       <div>
@@ -34,7 +34,7 @@ const Tasklist = () => {
         </div>
       </div>
       <div className="dashboard-container">
-        <Dashboard dashboard={dashboard}></Dashboard>
+        <Dashboard time={time}></Dashboard>
       </div>
     </div>
   );

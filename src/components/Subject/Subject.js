@@ -13,7 +13,7 @@ const Subject = (props) => {
         <p>Time required : {duration} min</p>
       </div>
       <button
-        onClick={() => handleAddToDashboard(props.subject)}
+        onClick={() => handleAddToDashboard(duration)}
         className="btn-dashboard"
       >
         <p className="btn-text">Add to list</p>
