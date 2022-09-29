@@ -1,0 +1,14 @@
+.q-header {
+  margin-top: 40px;
+  text-align: center;
+}
+.questions-container {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.question {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
